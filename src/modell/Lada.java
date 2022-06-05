@@ -1,27 +1,23 @@
-package main;
+package modell;
 
 public class Lada {
-    int[] ladak;
     boolean benneVan;
+    int ladak[] = new int[3];
+    
 
-    public Lada(int[] ladak) {
-        this.ladak = ladak;
-        benneVan = false;
-    }
-
-    public String LadakTartalma(int nyit) {
-        String uzenet = "";
+    public void LadakTartalma(int nyit) {
         for (int i = 0; i < ladak.length; i++) {
             if(nyit==2){
-                uzenet = "kincs";
                 benneVan=true;
             }else{
-                uzenet = "nincs kincs";
+                benneVan=false;
             }
         }
-       return uzenet;
     }
-    
+    public Lada(int[] ladak) {
+        this.ladak = ladak;
+        
+    }
 
     public int[] getLadak() {
         return ladak;
@@ -30,5 +26,7 @@ public class Lada {
     public boolean setBenneVan() {
         return benneVan;
     }
+
+    
     
 }
