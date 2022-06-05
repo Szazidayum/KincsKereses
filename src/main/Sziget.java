@@ -13,14 +13,15 @@ public class Sziget {
     }
     
     public int LadaNyitas(){
-        lada.getLadak();
+        lada = melyik();
+        
         System.out.println("Kérlek válassz egy ládát!");
-
+        
         int nyit;
         do {
             System.out.print("Ezt a ládát nyitom ki: "); 
         nyit = sc.nextInt();
-        if(nyit==1){
+        if(keres(nyit)){
             
             System.out.println("Megvan a kincs!");
         }else if(nyit==0 || nyit==2){
@@ -32,22 +33,22 @@ public class Sziget {
         return nyit;
     }  
     
-    private Lada melyik(int nyit) {
-        if(nyit==1){
-            nyitott = ladak[0];
-        }else if(nyit==2){
-            nyitott = ladak[1];
-        }else if(nyit == 3){
-            nyitott = ladak[2];
-        }
-        return new Lada(nyitott);
+    private Lada melyik() {
+        int arany = ladak[0];
+        int ezust = ladak[1];
+        int bronz = ladak[2];
+        return new Lada(ladak);
     }
     
-    private boolean nyitas(int nyit){
+    private boolean keres(int nyit){
         int i = 0;
         while(i < 3 && !(lada.getLadak()[i] == nyit)){
             i++;
         }
         return i < 3;
     }
+//        (lada.getLadak()[i] == nyit)){
+
+    
+
 }

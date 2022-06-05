@@ -1,34 +1,27 @@
 package main;
 
 public class Lada {
-    int ladak[] = new int[3];
+    int[] ladak;
     boolean benneVan;
 
-    public Lada(int[] ladak, boolean bennevanE) {
+    public Lada(int[] ladak) {
         this.ladak = ladak;
         benneVan = false;
     }
 
-    Lada(int nyitott) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String LadakTartalma(int nyitott) {
-        
-//        int arany = ladak[0];
-//        int ezust = ladak[1];
-//        int bronz = ladak[2];
+    public String LadakTartalma(int nyit) {
+        String uzenet = "";
         for (int i = 0; i < ladak.length; i++) {
-            if(ladak[i]==nyitott){
+            if(nyit==2){
+                uzenet = "kincs";
                 benneVan=true;
+            }else{
+                uzenet = "nincs kincs";
             }
         }
-       return "";
+       return uzenet;
     }
     
-//    public String nyitas(int nyit){
-//        
-//    }
 
     public int[] getLadak() {
         return ladak;
