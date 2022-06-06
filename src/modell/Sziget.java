@@ -1,6 +1,5 @@
 package modell;
 
-import modell.Lada;
 import java.util.Scanner;
 
 public class Sziget {
@@ -10,7 +9,6 @@ public class Sziget {
     int nyitott;
 
     public Sziget() {
-
         LadaNyitas();
     }
     

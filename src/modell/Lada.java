@@ -16,7 +16,7 @@ public class Lada {
     }
     public Lada(int[] ladak) {
         this.ladak = ladak;
-        
+        this.benneVan=benneVan;
     }
 
     public int[] getLadak() {
