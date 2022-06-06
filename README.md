@@ -1,6 +1,7 @@
 Kincskeresés
 
 Melyik rejti a kincset?
+
 ESET  ARANY EZÜST BRONZ
 1.	igaz	hamis	hamis
 2.	hamis	igaz	hamis
